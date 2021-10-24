@@ -1,0 +1,282 @@
+<html>
+<title>CSS TTD Temple Website</title>
+<style>
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav article ads"
+    "footer footer footer";
+  grid-template-rows: 80px 1fr 70px;  
+  grid-template-columns: 20% 1fr 15%;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  }
+footer, article, nav, div {
+  padding: 1.2em;
+  background: gold;
+  }
+#pageHeader {
+position:relative;
+  grid-area: header;
+  height:144px;
+  background:gold;
+  background-image:url("https://ak.picdn.net/shutterstock/videos/1058399308/thumb/1.jpg");
+  background-size:auto(default);
+  }
+#pageHeader h1 {
+  color:white;
+  text-align:center;
+  }
+#pageHeader h4 {
+  color:red;
+  }
+#pageHeader #tlogo {
+margin-top:-27px;
+margin-left:36px;
+}
+#pageHeader #logo {
+margin-left:1200px;
+margin-top:-72px;
+}
+#pageFooter {
+  grid-area: footer;
+  }
+#mainArticle { 
+  grid-area: article;
+  height:1440px;
+  }
+#mainArticle #laddu #ticket { 
+  display: flex;
+  }
+#mainArticle #ticket {
+margin-left:360px;
+margin-top:-10px;
+}
+#mainArticle #laddu {
+margin-left:360px;
+margin-top:-10px;
+}
+#mainArticle #para1 {
+margin-top:-117px;
+}
+#mainArticle #para2 {
+margin-top:-117px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+th{
+background-color:#f08080;
+}
+td, th {
+  border: 3px solid #000000;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #add8e6;
+}
+tr:nth-child(odd) {
+  background-color: #e0ffff;
+}
+#mainNav { 
+  grid-area: nav; 
+  }
+#siteAds { 
+  grid-area: ads; 
+  height:1440px;
+  } 
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+  body { 
+    grid-template-areas: 
+      "header"
+      "article"
+      "ads"
+      "nav"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 1fr 70px;  
+    grid-template-columns: 1fr;
+	
+ }
+</style>
+<body>
+<header id="pageHeader">
+<h1>TTD-Tirumala Thirupathi Devasthanam</h1>
+<img id="tlogo" src = "https://www.trimurtitemple.org/wp-content/uploads/2016/01/TTD-Logo.jpg" width=100px; height=90px;>
+<img id="logo" src = "https://toppng.com/uploads/preview/lord-tirupati-venkateswara-and-lord-vishnu-transparent-perumal-11562851736cu9rgrclbu.png" width=100px; height=90px; >
+<marquee width="100%" direction="right" height="100px">
+<h4><b>Welcome to Thirumala Thirupathi Devasthanam Official Website.</b></h4>
+</marquee>
+</header>
+
+<article id="mainArticle"><br><br><br><br>
+<h2>Accomodations :</h2>
+<center><img src = "https://www.tirumalatirupati.in/wp-content/uploads/2018/06/vishnu-nivasam.png" width=720px; height=250px;></center><br><br> 
+  <table>
+  <tr>
+  <th>Name of the choultry<br>
+  /Guest House</th>
+  <th>Total No. of<br>
+  Rooms</th>
+  <th>Allotment of<br>
+  Piligrims</th>
+  <th>L.F. Charges per Day 
+  <br>each room</th>
+  </tr>
+  <tr>
+  <td>Non-A.C Rooms</td>
+  <td>180</td>
+  <td>180</td>
+  <td>360.00</td>
+  </tr>
+   <td>Non-A.C Suites</td>
+  <td>9</td>
+  <td>9</td>
+  <td>540.00</td>
+  </tr>
+  <tr>
+  <td>A.C Rooms</td>
+  <td>180</td>
+  <td>180</td>
+  <td>900.00</td>
+  </tr>
+  <tr>
+  <td>A.C Suits</td>
+  <td>9</td>
+  <td>9</td>
+  <td>1530.00</td>
+  </tr>
+  </table>
+  <h3><b>Notes :</b></h3>
+   -> Rates are per room/suite/cottage.<br>
+   -> A 'day' is used to mean 24 hours from the time of allotment.<br>
+   -> Allotment is subject to availability.<br>
+   -> No advance reservation is available at Tirupati.<br><br>
+   
+<h2>Laddu Counter :</h2>
+<img id="laddu" src = "https://fastly.4sqi.net/img/general/600x600/hTHoL85fjaA2CaBu2KQnuZ3pWozwhBKPDbXkd9CJsUg.jpg" width=450px; height=240px;>
+<p id="para1">>Get Your Adaar for Prasadam.<br>
+   ->One Adaar 3 Laddus Only.<br>
+   ->One Laddu Cost 10RS Only/-.<br>
+   ->One Adaar 3 Lemon rice Packets Only.</b><br>
+   ->One Packet Cost 10RS Only/-.<br></p>
+<h2>Ticket Counter :</h2>
+<img id="ticket" src = "https://tirupatitirumalainfo.com/wp-content/uploads/2018/01/current-booking-counters.jpg" width=450px; height=240px;>
+<p id="para2">> Special entry darshanam.<br>
+   > Normal entry darshanam.<br>
+   > q-darshanam.</p>
+</article>
+<nav id="mainNav"><br><br><br><br>
+<h3><b>Login Details :<b></h3>
+<div>
+<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+  
+<form action="/action_page.php"><br><br>
+	
+    <label for="fname">First Name :</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.."><br><br>
+
+    <label for="lname">Last Name :</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br><br>
+
+    <label for="country">Country :</label>
+    <select id="country" name="country">
+	  <option value="usa">India</option>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select><br><br>
+	
+	<label for="State">State :</label>
+    <select id="State" name="State">
+	  <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Telangana">Telangana</option>
+	  <option value="Tamilnadu">Tamilnadu</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Karanataka">Karanataka</option>
+	  <option value="Maharastra">Maharastra</option>
+	  <option value="Punjab">Punjab</option>
+	  <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+    </select><br><br>
+	
+	<h4><b>Address :</b></h4>
+	<label for="streetname">Street :</label>
+    <input type="text" id="streetname" name="streetname" placeholder="Enter Your st.name.."><br><br>
+	
+	<label for="District">District :</label>
+    <input type="text" id="District" name="District" placeholder="Enter Your dt.name.."><br><br>Send 
+  
+    <label for="Pin-Code">Pin-Code :</label>
+    <input type="number" id="Pin-Code" name="Pin-Code" placeholder="Enter Your Pin-Code.."><br><br>
+	
+	<label for="Phone Number">Phone Number :</label>
+    <input type="number" id="Phone Number" name="Phone Number" placeholder="Enter Phone Number.."><br><br>
+	
+	<label for="Enter Code">Enter Code :</label>
+    <input type="number" id="Enter Code" name="Enter Code" placeholder="Enter Code Send to Your Number.."><br><br>
+	
+    <input type="submit" value="Submit"><br><br>
+	
+	<input type="Login" value="Login">
+
+</form>
+</div>
+  <article>
+    <img src="https://c8.alamy.com/comp/DHY625/srivilliputhur-divya-desam-tamil-nadu-india-DHY625.jpg" width=250px; height=162px;>
+    <div class="text">
+      <h2>AAndaal Temple :</h2>
+      <p>The temple has inscriptions from Chola, Pandya and Nayak rulers, spanning across various centuries from the 10th to 16th centuries. As per some accounts, the original structure was constructed by Tribuvana Chakravarthy Konerinmai Kondan Kulasekaran and the Andal temple by Barathi Rayar.</p>
+      <button>Buy Online Ticket</button>
+    </div>
+  </article>
+</nav>
+<div id="siteAds"><br><br><br>
+  <article>
+    <img src="https://www.tourmyindia.com/heritage/images/brihadeeswarar1.jpg" width=171px; height=162px;>
+    <div class="text">
+      <h2>Brihadeshwara Temple :</h2>
+      <p>
+The temple has the world's tallest vimanam (temple tower) and its Kumbam (the structure on the top) weighs approximately 80 tons. ... Chola frescoes adorn the wall of the temple and these frescoes depict Shiva in different poses. Brihadeeswarar temple is the first complete granite temple in the world.</p>
+      <button>Buy Online Ticket</button>
+    </div>
+  </article>
+<h2><b>References :</b></h2>
+<dl>
+<dt>Other Links :</dt>
+<dd>Festivals</dd>
+<dd>Advance Bookings</dd>
+<dd>Music</dd>
+<dd>Books</dd>
+<dd>TTD Kalyanamandapam's</dd>
+<dd>Voluntary Services</dd>
+<dd>Active Tenders</dd>
+<dd>Archives</dd>
+</dl><br>
+<dl>
+<dt>Information :</dt>
+<dd>Home</dd>
+<dd>Site Maps</dd>
+<dd>FAQ'S</dd>
+<dd>Dharmic Programmes</dd>
+<dd>Package Tours</dd>
+</dl><br>
+<dl>
+<dt>Sevas :</dt>
+<dd>Arjitha Sevas</dd>
+<dd>Daily Sevas</dd>
+<dd>Weekly Sevas</dd>
+<dd>Annual Sevas</dd>
+<dd>Periodical Sevas</dd>
+</dl>
+</div>
+</body>
